@@ -1,0 +1,29 @@
+<div class="mb-2">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @place.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @place.address %>
+  </p>
+
+  <p>
+    <strong>Latitute:</strong>
+    <%= @place.latitude %>
+  </p>
+
+  <p>
+    <strong>Longitute:</strong>
+    <%= @place.longitude %>
+  </p>
+
+  <%= link_to 'Edit', edit_place_path(@place) %> |
+  <%= link_to 'Back', places_path %>
+</div>
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@place.latitude},#{@place.longitude}&markers=#{@place.latitude},
+          #{@place.longitude}&zoom=7&size=640x400&key=AIzaSyCtCLPF6KYDTfKXpHVvYXsOeoQOXq9AnJM",
+              class: 'img-fluid img-rounded', alt: "#{@place.name} on the map" %>

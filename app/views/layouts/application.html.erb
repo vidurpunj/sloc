@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sloc</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Sloc</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  mb-2">
+  <div class="container">
+    <a class="navbar-brand text-capitalize" href="/">Share loc</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+           <%= link_to "welcome - #{current_user.email}", places_path, class: 'nav-link' if user_signed_in? %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Share', places_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item dropdown">
+          <ul class="list-unstyled">
+            <% if user_signed_in? %>
+                <li class="list-item">
+                  <%= link_to('Logout', destroy_user_session_path, class: 'nav-link', method: :delete) %>
+                </li>
+            <% else %>
+                <li class="list-item">
+                  <%= link_to('Login', new_user_session_path, class: 'nav-link') %>
+                </li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <%= yield %>
+</div>
+<div class="fixed-bottom bg-dark text-light text-center"><span class="text-capitalize">All rights reserved</span></div>
+</body>
 </html>
