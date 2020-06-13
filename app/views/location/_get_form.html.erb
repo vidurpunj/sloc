@@ -1,0 +1,10 @@
+<%= form_with model: current_user, url: share_location_path(current_user.id), method: :post do |f| %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :email) %>
+      </div>
+      <div class="col-md-2">
+        <%= f.submit %>
+      </div>
+    </div>
+<% end %>

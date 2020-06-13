@@ -145,9 +145,9 @@
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v3.0.0, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.6, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="devise (v4.7.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.7.2, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.9.0, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.13.0, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.13.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.6.3, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.3, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
@@ -190,7 +190,7 @@
     <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.7.2, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.2.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thor (v1.0.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.20.3, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.6, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.10, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.2.1, RVM: ruby-2.7.0 [rails6]) [gem]" level="application" />

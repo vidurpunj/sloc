@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @location = UserLocation.new
+    @user_locations = current_user.user_locations
+    @shared_location = SharedLocation.first
   end
 end
