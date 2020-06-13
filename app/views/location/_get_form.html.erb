@@ -1,6 +1,6 @@
 <%= form_with model: current_user, url: share_location_path(current_user.id), method: :post do |f| %>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :email) %>
         <%= f.hidden_field :user_locations_id , value: user_location_id %>
       </div>
