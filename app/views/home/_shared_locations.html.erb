@@ -7,6 +7,7 @@
     <th>Longituide</th>
     <th>share</th>
     <th>Delete</th>
+    <th>Location</th>
   </tr>
   </thead>
   <tbody>
@@ -21,6 +22,9 @@
         </td>
         <td>
           <%= link_to "Delete", remove_shared_location_path(location.id), class: 'btn btn-outline-success', method: :delete, remote: true, data: {confirm: 'Are you sure want to delete ?'} %>
+        </td>
+        <td>
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{ location.latitude}%2C#{location.longitude}&key=AIzaSyCtCLPF6KYDTfKXpHVvYXsOeoQOXq9AnJM" %>
         </td>
       </tr>
   <% end %>
