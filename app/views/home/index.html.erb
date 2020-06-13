@@ -7,6 +7,9 @@
   <div class="col-md-4">
     <%= link_to "Shared Locations", shared_locations_path(current_user.id), remote: true, class: 'btn btn-outline-success' %>
   </div>
+  <div class="col-md-4">
+    <%= link_to "Shared Locations with me", shared_locations_with_me_path(current_user.id), remote: true, class: 'btn btn-outline-success' %>
+  </div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="share_location" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

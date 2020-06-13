@@ -20,4 +20,8 @@ class LocationController < ApplicationController
   def remove_shared
     SharedLocation.find(params[:id]).destroy
   end
+
+  def remove_shared_with_me
+    SharedLocation.find(params[:id]).destroy
+  end
 end
