@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_10_145704) do
+ActiveRecord::Schema.define(version: 2020_06_13_210859) do
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_145704) do
     t.bigint "shared_with_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_location_id"
     t.index ["shared_with_id"], name: "index_shared_locations_on_shared_with_id"
     t.index ["user_id"], name: "index_shared_locations_on_user_id"
   end

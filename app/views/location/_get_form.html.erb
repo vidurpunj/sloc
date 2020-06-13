@@ -2,6 +2,7 @@
     <div class="row">
       <div class="col-md-6">
         <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :email) %>
+        <%= f.hidden_field :user_locations_id , value: user_location_id %>
       </div>
       <div class="col-md-2">
         <%= f.submit %>

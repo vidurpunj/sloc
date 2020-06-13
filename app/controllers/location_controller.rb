@@ -5,15 +5,19 @@ class LocationController < ApplicationController
   end
 
   def share
-    current_user.shared_locations.new(shared_with: User.find(params[:user][:user_id]))
+    current_user.shared_locations.create(shared_with: User.find(params[:user][:user_id]),  user_location: UserLocation.find(params[:user][:user_locations_id]))
   end
 
   def get_form
     @user = User.find(params[:id])
-    render partial: 'get_form', locals: {user: @user}
+    render partial: 'get_form', locals: { user: @user, user_location_id: params[:user_location_id] }
   end
 
   def remove
     UserLocation.find(params[:id]).destroy
+  end
+
+  def remove_shared
+    SharedLocation.find(params[:id]).destroy
   end
 end

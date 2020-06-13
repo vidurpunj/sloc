@@ -1,6 +1,13 @@
-<h1 class="h1 d-inline">Your Locations</h1> --
+<h1 class="h1 d-inline">Locations</h1> --
 <%= link_to "Add Location", '', :id => 'login', "data-toggle" => "modal", 'data-target' => '#share_location', class: 'btn btn-outline-success' %>
-
+<div class="row mt-4 mb-4">
+  <div class="col-md-4">
+    <%= link_to "My Locations", my_locations_path(current_user.id), remote: true, class: 'btn btn-outline-success' %>
+  </div>
+  <div class="col-md-4">
+    <%= link_to "Shared Locations", shared_locations_path(current_user.id), remote: true, class: 'btn btn-outline-success' %>
+  </div>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="share_location" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -56,13 +63,12 @@
   </div>
 </div>
 <script>
-    function share_location() {
-        console.log('inside share');
+    function share_location(user_location_id) {
         $.ajax({
             url: "<%= get_form_location_path(current_user.id) %>",
             method: 'get',
+            data: 'user_location_id=' + encodeURIComponent(user_location_id),
             success: function (data) {
-                console.log('success');
                 $('#share_form').html(data);
             }
         });
