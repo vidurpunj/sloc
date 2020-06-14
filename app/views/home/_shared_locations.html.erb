@@ -1,11 +1,10 @@
 <table class="table table-bordered">
   <thead>
   <tr>
-    <th>Email with</th>
+    <th>Shared with</th>
     <th>Address</th>
     <th>Latitude</th>
     <th>Longituide</th>
-    <th>share</th>
     <th>Delete</th>
     <th>Location</th>
   </tr>
@@ -17,9 +16,6 @@
         <td><%= location.address %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
-        <td>
-          <%= link_to "Share", 'share_with', "data-toggle" => "modal", 'data-target' => '#shareModal', class: 'btn btn-outline-success', onclick: "share_location()" %>
-        </td>
         <td>
           <%= link_to "Delete", remove_shared_location_path(location.id), class: 'btn btn-outline-success', method: :delete, remote: true, data: {confirm: 'Are you sure want to delete ?'} %>
         </td>
