@@ -25,6 +25,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: sloc_production
   username: sloc
-  password: <%= ENV['SLOC_DATABASE_PASSWORD'] %>
+  password: root
