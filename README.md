@@ -16,3 +16,9 @@ Database is mysql, I have tried it with postgres but for postgres 11 due to some
 I am Brand new with webpack, in a beginer stage with React so made the front end in rails.
   
 
+To deplay this application with mysql on Heroku it require to add credit card,
+so the application is facing the database issue.
+Heroku url: https://sloc.herokuapp.com/users/sign_in which is giving error
+Application is currently deplayed at my machine at url:
+GitHub repo: https://github.com/vidurpunj/sloc
+If you want the application to be deployed on heroku share your heroku credentials.
